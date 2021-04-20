@@ -11,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NetFlics">
         <activity android:name=".ui.activity.RegisterActivity"></activity>
+
         <!-- Activity for login navigation -->
         <activity android:name=".ui.activity.LoginActivity"
             android:screenOrientation="portrait">
@@ -19,7 +20,9 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- Activity for main navigation -->
+        </activity>
+
+        <!-- Activity for main navigation -->
         <activity android:name=".ui.activity.MainActivity" />
     </application>
 

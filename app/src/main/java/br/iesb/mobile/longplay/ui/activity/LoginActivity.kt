@@ -6,8 +6,14 @@ import android.os.Bundle
 import android.widget.Toast
 import br.iesb.mobile.longplay.R
 import com.google.firebase.auth.FirebaseAuth
+import dagger.hilt.android.AndroidEntryPoint
+import dagger.hilt.android.WithFragmentBindings
+import javax.inject.Inject
 
+@AndroidEntryPoint
+@WithFragmentBindings
 class LoginActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -28,7 +34,6 @@ class LoginActivity : AppCompatActivity() {
     private fun login(){
         val email = emailLogin.text.toString()
         val senha = passwordLogin.text.toString()
-        val auth = FirebaseAuth.getInstance()
 
         val taskDeLogin = auth.signInWithEmailAndPassword(email,senha)
 

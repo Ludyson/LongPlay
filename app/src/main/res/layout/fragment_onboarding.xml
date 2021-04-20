@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
-            name="fragment"
+            name="codigoDoFragmento"
             type="br.iesb.mobile.longplay.ui.fragment.onboarding.OnboardingFragment" />
     </data>
 
@@ -37,7 +37,8 @@
             android:textColor="@color/brand_white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            android:onClick="@{codigoDoFragmento::startLogin}"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

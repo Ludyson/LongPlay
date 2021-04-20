@@ -7,7 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import br.iesb.mobile.longplay.R
 import br.iesb.mobile.longplay.databinding.FragmentOnboardingBinding
 import br.iesb.mobile.longplay.ui.fragment.onboarding.screen.OnboardingSecondFragment
 import br.iesb.mobile.longplay.ui.fragment.onboarding.screen.OnboardingThirdFragment
@@ -17,11 +19,16 @@ class OnboardingFragment : Fragment() {
 
     private lateinit var binding: FragmentOnboardingBinding
 
+    fun startLogin(v: View) {
+        findNavController().navigate(R.id.action_onboardingFragment_to_telaLoginFragment)
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentOnboardingBinding.inflate(inflater, container, false)
+        binding.codigoDoFragmento = this
         binding.lifecycleOwner = this
 
         //Fonte de Dados
@@ -37,10 +44,6 @@ class OnboardingFragment : Fragment() {
         binding.vpOnboarding.adapter = adaptador
 
         return binding.root
-    }
-
-    fun start() {
-
     }
 }
 
