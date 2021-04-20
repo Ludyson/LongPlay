@@ -1,11 +1,12 @@
 package br.iesb.mobile.longplay
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import br.iesb.mobile.longplay.databinding.FragmentTelaLoginBinding
@@ -16,7 +17,7 @@ class TelaLoginFragment : Fragment() {
     private lateinit var binding: FragmentTelaLoginBinding
 
     fun fazerLogin(v: View) {
-       // login()
+        //login()
     }
 
     fun iniciarCadastro(v: View) {
@@ -27,10 +28,7 @@ class TelaLoginFragment : Fragment() {
         findNavController().navigate(R.id.action_telaLoginFragment_to_telaRecupararFragment)
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = FragmentTelaLoginBinding.inflate(inflater,container,false)
         binding.codigoDoFragmento = this
         binding.lifecycleOwner = this
@@ -49,7 +47,7 @@ class TelaLoginFragment : Fragment() {
             if(resultado.isSuccessful) {
                 findNavController().navigate(R.id.action_telaLoginFragment_to_mainActivity)
             }else{
-                Toast.makeText(this, "Erro de Login", Toast.LENGTH_LONG).show()
+                Toast.makeText(this,"Erro no Login",Toast.LENGTH_LONG).show()
             }
         }
     }*/
