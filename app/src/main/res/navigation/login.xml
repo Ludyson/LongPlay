@@ -27,7 +27,7 @@
     </fragment>
     <fragment
         android:id="@+id/telaLoginFragment"
-        android:name="br.iesb.mobile.longplay.TelaLoginFragment"
+        android:name="br.iesb.mobile.longplay.ui.fragment.login.TelaLoginFragment"
         android:label="fragment_tela_login"
         tools:layout="@layout/fragment_tela_login" >
         <action
@@ -42,12 +42,12 @@
     </fragment>
     <fragment
         android:id="@+id/telaCadastroFragment"
-        android:name="br.iesb.mobile.longplay.TelaCadastroFragment"
+        android:name="br.iesb.mobile.longplay.ui.fragment.login.TelaCadastroFragment"
         android:label="fragment_tela_cadastro"
         tools:layout="@layout/fragment_tela_cadastro" />
     <fragment
         android:id="@+id/telaRecupararFragment"
-        android:name="br.iesb.mobile.longplay.TelaRecupararFragment"
+        android:name="br.iesb.mobile.longplay.ui.fragment.login.TelaRecuperarFragment"
         android:label="fragment_tela_recuparar"
         tools:layout="@layout/fragment_tela_recuparar" />
     <activity

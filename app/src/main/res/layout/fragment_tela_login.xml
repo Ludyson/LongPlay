@@ -7,15 +7,18 @@
     <data>
         <variable
             name="codigoDoFragmento"
-            type="br.iesb.mobile.longplay.TelaLoginFragment" />
+            type="br.iesb.mobile.longplay.ui.fragment.login.TelaLoginFragment" />
+
+        <variable
+            name="viewmodel"
+            type="br.iesb.mobile.longplay.viewmodel.LoginViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/gradiente"
-        tools:context=".TelaLoginFragment">
+        tools:context=".ui.fragment.login.TelaLoginFragment">
 
         <EditText
             android:id="@+id/emailLogin"
@@ -24,8 +27,10 @@
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
             android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/azul"
             android:ems="10"
             android:hint="@string/txt_email"
+            android:text="@={viewmodel.email}"
             android:inputType="textEmailAddress"
             app:layout_constraintBottom_toTopOf="@+id/guideline2"
             app:layout_constraintEnd_toEndOf="parent"
@@ -39,8 +44,10 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="32dp"
+            android:backgroundTint="@color/azul"
             android:ems="10"
             android:hint="@string/txt_senha"
+            android:text="@={viewmodel.password}"
             android:inputType="textPassword"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -55,13 +62,13 @@
             android:layout_marginBottom="16dp"
             android:backgroundTint="@color/azul"
             android:text="@string/txt_entrar"
+            android:onClick="@{codigoDoFragmento::fazerLogin}"
             android:textColor="@color/brand_white"
             android:visibility="visible"
             app:layout_constraintBottom_toTopOf="@+id/btCadastrar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:visibility="visible"
-            android:onClick="@{codigoDoFragmento::fazerLogin}" />
+            tools:visibility="visible" />
 
         <Button
             android:id="@+id/btCadastrar"
@@ -72,26 +79,28 @@
             android:layout_marginBottom="16dp"
             android:backgroundTint="@color/azul"
             android:text="@string/txt_cadastrar"
+            android:onClick="@{codigoDoFragmento::iniciarCadastro}"
             android:textColor="@color/brand_white"
             app:layout_constraintBottom_toTopOf="@+id/tvRecuperar"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:onClick="@{codigoDoFragmento::iniciarCadastro}" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/tvRecuperar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            android:layout_marginEnd="64dp"
             android:layout_marginBottom="32dp"
             android:fontFamily="sans-serif"
             android:text="@string/txt_recuperar"
+            android:onClick="@{codigoDoFragmento::recuperarSenha}"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Display3"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:onClick="@{codigoDoFragmento::recuperarSenha}" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
             android:id="@+id/imageView2"
