@@ -19,9 +19,12 @@
     <fragment
         android:id="@+id/perfilHomeFragment"
         android:name="br.iesb.mobile.longplay.ui.fragment.main.PerfilHomeFragment"
-        android:label="PerfilHomeFragment" />
+        android:label="PerfilHomeFragment"
+        tools:layout="@layout/fragment_perfil_home"/>
+
     <fragment
         android:id="@+id/confHomeFragment"
         android:name="br.iesb.mobile.longplay.ui.fragment.main.ConfHomeFragment"
-        android:label="ConfHomeFragment" />
+        android:label="ConfHomeFragment"
+        tools:layout="@layout/fragment_conf_home" />
 </navigation>
