@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1076079210197",
+    "project_id": "longplay-dcb42",
+    "storage_bucket": "longplay-dcb42.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1076079210197:android:869de7841cb35121d9bc5c",
+        "android_client_info": {
+          "package_name": "br.iesb.mobile.longplay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1076079210197-r8vlfpmc3l492p5q23k3o3q38q1j1f3k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZYuEaJEen8mUd-SQ57RtlVh55bdvj2jY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1076079210197-r8vlfpmc3l492p5q23k3o3q38q1j1f3k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
