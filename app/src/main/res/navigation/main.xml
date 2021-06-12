@@ -8,5 +8,20 @@
         android:id="@+id/homeFragment"
         android:name="br.iesb.mobile.longplay.ui.fragment.main.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_perfilHomeFragment"
+            app:destination="@id/perfilHomeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_confHomeFragment"
+            app:destination="@id/confHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/perfilHomeFragment"
+        android:name="br.iesb.mobile.longplay.ui.fragment.main.PerfilHomeFragment"
+        android:label="PerfilHomeFragment" />
+    <fragment
+        android:id="@+id/confHomeFragment"
+        android:name="br.iesb.mobile.longplay.ui.fragment.main.ConfHomeFragment"
+        android:label="ConfHomeFragment" />
 </navigation>

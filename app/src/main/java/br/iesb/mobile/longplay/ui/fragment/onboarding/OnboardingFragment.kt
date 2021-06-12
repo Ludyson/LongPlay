@@ -23,10 +23,7 @@ class OnboardingFragment : Fragment() {
         findNavController().navigate(R.id.action_onboardingFragment_to_telaLoginFragment)
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = FragmentOnboardingBinding.inflate(inflater, container, false)
         binding.codigoDoFragmento = this
         binding.lifecycleOwner = this
